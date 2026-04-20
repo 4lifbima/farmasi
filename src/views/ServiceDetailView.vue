@@ -42,22 +42,12 @@ const recommendations = computed(() => {
 
       <section class="detail-content">
         <article class="panel detail-card">
-          <h2>Manfaat Utama</h2>
-          <ul class="detail-list">
-            <li v-for="point in service.benefits" :key="point">
-              <Icon icon="solar:check-circle-bold-duotone" />
-              <span>{{ point }}</span>
-            </li>
-          </ul>
-        </article>
-
-        <article class="panel detail-card">
-          <h2>Alur Proses</h2>
-          <ol class="detail-steps">
-            <li v-for="step in service.flow" :key="step">{{ step }}</li>
-          </ol>
+          <p class="eyebrow">Penjelasan Layanan</p>
+          <h2>{{ service.title }}</h2>
+          <p class="detail-note">{{ service.desc }}</p>
           <p class="detail-note">
-            Setiap tahap dapat dipantau melalui dashboard agar evaluasi operasional berjalan konsisten.
+            Layanan ini dirancang untuk memperkuat proses kefarmasian agar lebih sistematis,
+            terkontrol, dan sesuai standar pelayanan.
           </p>
         </article>
       </section>

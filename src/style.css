@@ -248,6 +248,10 @@ body {
   margin: 0;
 }
 
+.overview-summary {
+  margin-top: 16px;
+}
+
 .stats-grid {
   margin-top: 16px;
   display: grid;
@@ -442,7 +446,7 @@ body {
 
 .detail-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 

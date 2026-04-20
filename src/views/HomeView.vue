@@ -8,6 +8,17 @@ const stats = [
   { label: 'Dukungan Keputusan', value: 'Cepat & Akurat', icon: 'solar:graph-up-bold-duotone' },
   { label: 'Standar Layanan', value: 'Terkontrol', icon: 'solar:shield-check-bold-duotone' }
 ]
+
+const allServiceSummary = highlights.map((item) => item.title).join(', ')
+
+const unifiedBenefits = [
+  'Pelayanan resep, farmasi klinik, dan evaluasi terapi berjalan lebih terstandar.',
+  'Pengelolaan persediaan, forecasting kebutuhan, dan logistik saling terintegrasi.',
+  'Laporan operasional dan keuangan mendukung pengambilan keputusan yang cepat dan akurat.'
+]
+
+const unifiedFlow =
+  'Perencanaan kebutuhan -> Pengadaan -> Penyimpanan -> Distribusi -> Pelayanan pasien -> Evaluasi dan pelaporan.'
 </script>
 
 <template>
@@ -58,6 +69,21 @@ const stats = [
           Dengan dukungan teknologi informasi, website ini memudahkan pemantauan stok, pengelolaan
           data pasien, serta pengambilan keputusan yang lebih cepat dan akurat.
         </p>
+        <div class="overview-summary">
+          <p class="detail-note">
+            Cakupan layanan terintegrasi: <strong>{{ allServiceSummary }}</strong
+            >.
+          </p>
+          <ul class="detail-list">
+            <li v-for="point in unifiedBenefits" :key="point">
+              <Icon icon="solar:check-circle-bold-duotone" />
+              <span>{{ point }}</span>
+            </li>
+          </ul>
+          <p class="detail-note">
+            Alur proses utama: <strong>{{ unifiedFlow }}</strong>
+          </p>
+        </div>
       </article>
 
       <div class="stats-grid">
